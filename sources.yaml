@@ -1,0 +1,145 @@
+# Machine-readable source registry for the Job-Signal ingestion layer.
+# Mirrors job_signal_sources.md. Free/public sources only.
+#
+# Each source:
+#   name:      human-readable (-> RawDocument.source_name)
+#   tier:      state_primary | regional_edo | business_journal | news_aggregator
+#   type:      rss | html | pdf_index
+#   enabled:   whether `poll` fetches it
+#   verify:    feed/selector mechanics not yet confirmed at build time (WebFetch was down)
+#   region:    free-text coverage tag (for filtering to footprint)
+#
+# type=rss:    feed_url
+# type=html:   list_url, link_selector (CSS for <a> to articles), [link_pattern (regex on href)],
+#              [article_text_selector (CSS for main body; falls back to <article>/<main>/<body>)]
+# type=pdf_index: index_url, link_pattern (regex matching .pdf hrefs to crawl)
+
+sources:
+
+  # ---- Tier 1: state_primary (verified=true eligible) ----
+  - name: NC Commerce - Press Releases
+    tier: state_primary
+    type: html
+    enabled: false   # needs selector confirmation
+    verify: true
+    region: NC
+    list_url: https://www.commerce.nc.gov/news/press-releases
+    link_selector: a
+    link_pattern: '/news/press-releases/\d{4}/\d{2}/\d{2}/'
+
+  - name: NC Governor's Office - Press Releases
+    tier: state_primary
+    type: html
+    enabled: false
+    verify: true
+    region: NC
+    list_url: https://governor.nc.gov/news/press-releases
+    link_selector: a
+    link_pattern: '/news/press-releases/\d{4}/\d{2}/\d{2}/'
+
+  - name: EDPNC - News
+    tier: state_primary
+    type: rss
+    enabled: true
+    verify: false    # confirmed working (site-wide WordPress feed)
+    region: NC
+    feed_url: https://edpnc.com/feed/
+
+  - name: NC JDIG - EIC documents
+    tier: state_primary
+    type: pdf_index
+    enabled: false   # confirm EIC packet index URL on ncleg.gov
+    verify: true
+    region: NC
+    index_url: https://www.commerce.nc.gov/grants-incentives/competitive-incentives/job-development-investment-grant-jdig
+    link_pattern: '\.pdf'
+
+  - name: SC Commerce - News
+    tier: state_primary
+    type: html
+    enabled: false
+    verify: true
+    region: SC
+    list_url: https://www.sccommerce.com/tags/commerce-news
+    link_selector: a
+    link_pattern: '/news/'
+
+  # ---- Tier 2: regional_edo ----
+  - name: Charlotte Regional Business Alliance - Economic Development News
+    tier: regional_edo
+    type: html
+    enabled: false
+    verify: true
+    region: Charlotte metro (NC+SC)   # ★ core footprint
+    list_url: https://charlotteregion.com/economic-development-news/
+    link_selector: a
+    link_pattern: '/news/'
+
+  - name: York County (SC) Economic Development - Announcements
+    tier: regional_edo
+    type: html
+    enabled: false
+    verify: true
+    region: York County SC   # ★ Charlotte-metro SC
+    list_url: https://www.yorkcountyed.com/news-media/announcements
+    link_selector: a
+
+  - name: Wake County Economic Development
+    tier: regional_edo
+    type: html
+    enabled: false
+    verify: true
+    region: Wake County NC
+    list_url: https://raleigh-wake.org/blog
+    link_selector: a
+
+  - name: Upstate SC Alliance - Media Center
+    tier: regional_edo
+    type: html
+    enabled: false
+    verify: true
+    region: Upstate SC
+    list_url: https://www.upstatescalliance.com/data-resources/media-center/
+    link_selector: a
+
+  # ---- Tier 3: business_journal (free tier: headlines/metadata) ----
+  - name: Charlotte Business Journal
+    tier: business_journal
+    type: rss
+    enabled: false   # bizjournals returns HTTP 403 to bots; needs a feed reader/proxy or paid API
+    verify: true
+    region: Charlotte metro
+    feed_url: https://www.bizjournals.com/charlotte/news/rss.xml
+
+  - name: Triangle Business Journal
+    tier: business_journal
+    type: rss
+    enabled: false   # bizjournals returns HTTP 403 to bots; needs a feed reader/proxy or paid API
+    verify: true
+    region: NC Triangle
+    feed_url: https://www.bizjournals.com/triangle/news/rss.xml
+
+  - name: Upstate Business Journal - Economic Development
+    tier: business_journal
+    type: rss
+    enabled: true
+    verify: false    # confirmed working
+    region: Upstate SC
+    feed_url: https://upstatebusinessjournal.com/category/economic-development/feed/
+
+  # ---- Tier 4: news_aggregator ----
+  - name: WRAL TechWire
+    tier: news_aggregator
+    type: rss
+    enabled: true
+    verify: false    # confirmed working (15 entries)
+    region: NC (Triangle-weighted)
+    feed_url: https://www.wral.com/rs/rss/18189979/?blog
+
+  - name: Area Development
+    tier: news_aggregator
+    type: rss
+    enabled: true
+    verify: false    # confirmed working (50 entries, corporate-relocation news)
+    region: National (NC/SC filterable)
+    feed_url: https://www.areadevelopment.com/rss/NewsItems.xml?t=2

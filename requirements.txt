@@ -1,0 +1,9 @@
+# Ingestion layer deps (free/public sources). Python >= 3.12.
+feedparser>=6.0.11      # RSS/Atom parsing
+requests>=2.32.0        # HTTP
+beautifulsoup4>=4.12.0  # HTML list + article text extraction
+lxml>=5.2.0             # fast parser backend for bs4
+pypdf>=4.2.0            # JDIG EIC packet / incentive-report PDF text
+PyYAML>=6.0             # sources registry
+python-dateutil>=2.9.0  # lenient date parsing
+openpyxl>=3.1.0         # weekly report: build the running-database .xlsx workbook
