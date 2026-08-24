@@ -14,11 +14,11 @@ from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
 
-REPORT_DATE = "2026-08-17"
-WINDOW = "2026-02-17 to 2026-08-17"  # trailing 6 months
+REPORT_DATE = "2026-08-24"
+WINDOW = "2026-02-24 to 2026-08-24"  # trailing 6 months
 
-PRIOR_REPORT_DATE = "2026-08-10"
-PRIOR_WINDOW = "2026-02-10 to 2026-08-10"
+PRIOR_REPORT_DATE = "2026-08-17"
+PRIOR_WINDOW = "2026-02-17 to 2026-08-17"
 
 HDR_FILL = PatternFill("solid", fgColor="1F3864")
 HDR_FONT = Font(bold=True, color="FFFFFF", size=10)
@@ -472,7 +472,111 @@ WEEK5_RUNNING = [
      "Reclassified from Markets to Watch: the Dec. 2025 lease predates the window, but this cycle confirms an in-window construction milestone (building renovation on track for summer 2026 completion) corroborating the expected Q4 2026 move-in flagged last cycle."],
 ]
 
-RUNNING = WEEK1_RUNNING + WEEK2_RUNNING + WEEK3_RUNNING + WEEK4_RUNNING + WEEK5_RUNNING
+# ---- Week 6 (2026-08-24) ----
+WEEK6_RUNNING = [
+    ["2026-08-24", "Repeated", 1, 93, "Charlotte / Uptown", "Mecklenburg", "NC",
+     "SMBC Group — 2nd US HQ / bank operations", "Banking / financial services",
+     "Lease signed / active hiring milestone (unchanged)", 2000, "Projected (6 yr)",
+     "$165,316 avg (stated; vs county $90,706)", "N/A — stated", "$50.5M",
+     "JDIG up to $70.0M / 12 yr; $23.3M IDF-Utility Account", "Leased former One Wells Fargo Center; hiring 70+ roles; first workers fall 2026",
+     "2026-05-04", "https://www.axios.com/local/charlotte/2026/05/04/smbc-headquarters-wells-fargo-center-uptown",
+     "High", "Office / HQ banking", "Urban",
+     "Premier high-income signal; Class-A urban MF + high-end for-sale TH in Uptown/South End/Dilworth.",
+     "Fifth consecutive quiet cycle; no new in-window milestone found despite a dedicated Charlotte-metro research pass this cycle."],
+
+    ["2026-08-24", "Updated", 2, 91, "Rock Hill / York Co.", "York", "SC",
+     "Octapharma — \"Project Palmetto Rock\" HQ + manufacturing campus (site-plan design milestone)", "Biopharmaceutical (plasma fractionation)",
+     "Public site-plan renderings presented at regional summit; property sale still pending", 1500, "Projected (1,200 new + 300 relocated)",
+     "$141,502 avg HQ / $102,752 avg mfg (both stated)", "N/A — stated", "$1.5B",
+     "Fee-in-lieu-of-tax; $65M SC Coordinating Council Closing Fund grant to York Co.", "Octapharma COO Alice Stewart presented proposed site-plan renderings for the Rock Hill HQ/mfg campus at the SC I-77 Alliance's Annual Economic Development Summit (Richburg, SC); operations still expected to begin in the 2030s; property sale not yet confirmed closed",
+     "2026-08-19", "https://www.postandcourier.com/york-county/news/octapharma-how-company-chose-rock-hill/article_b1518265-129d-4134-9ff9-f2d686950bd6.html",
+     "High", "Office/HQ + biopharma mfg", "Suburban",
+     "Dual-tier: $141k HQ roles -> luxury for-sale/Class-A in Rock Hill/Fort Mill; $102k mfg roles -> premium workforce-plus rental/TH.",
+     "First in-window forward-planning milestone since the two council votes finalized in July: public site-plan renderings move the project from 'approved on paper' toward a visible design phase, even though the property sale itself has still not been confirmed closed. +1 for reduced execution-risk discount."],
+
+    ["2026-08-24", "Repeated", 3, 84, "Durham / RTP", "Durham", "NC",
+     "AbbVie — biopharma manufacturing campus", "Biopharma / life sciences mfg",
+     "New facility (greenfield, 185 ac)", 734, "Projected (+2,000 construction)",
+     "$118,041 avg (stated; vs county $102,817)", "N/A — stated", "$1.4B",
+     "JDIG up to $19.3M / 12 yr; $6.4M IDF-Utility; +city/county", "Construction 2026; complete ~end-2028; hiring through ~2031",
+     "2026-04-22", "https://news.abbvie.com/2026-04-22-AbbVie-Selects-North-Carolina-for-New-1-4-Billion-Manufacturing-Campus",
+     "High", "Adv. mfg / R&D / lab", "Suburban-urban",
+     "High-end MF + move-up for-sale around Durham/RTP; spillover Wake/Orange. Construction-phase rental near-term.",
+     "No new in-window milestone found this cycle; Durham County was reported to be considering an additional local incentive package (~$15M) tied to the project, but the exact hearing date could not be pinned down this cycle — flagged for confirmation next cycle, not scored."],
+
+    ["2026-08-24", "Updated", 4, 83, "Blythewood / N. Columbia", "Richland", "SC",
+     "Scout Motors — EV assembly plant (funding, litigation, and framing update)", "Automotive / EV manufacturing",
+     "State funding for site cost-overrun secured; new community-relations friction; delivery-timeline framing shifted", 4000, "Projected (600+ hired as of Apr 2026; 200-300 more planned in 2026)",
+     "$30-$37.50/hr line (stated); salaried higher", "Estimated/Inferred mix supports above-median HH income",
+     "$2.0B (+$25M training center)", "State/local package (2023); $25M readySC", "Body Shop now has 700+ robots installed; Paint Shop near completion; Gov. McMaster's Aug. 17, 2026 budget veto clears a $150M state payment for site cost overruns (was at risk of being held pending a Dec. 2026 audit); Scout and outlets now describe total site employment as ~5,000 (folding in the ~1,000-job supplier park) vs. the standard 4,000 figure, and increasingly frame full production as 'completed in 2028' rather than 2027",
+     "2026-08-17", "https://scdailygazette.com/2026/08/17/sc-governor-vetoes-delay-on-paying-agency-overruns-at-scout-motors-site/",
+     "Medium (facts); Low (headcount/timeline)", "Auto mfg + salaried eng.", "Suburban",
+     "Bifurcated: salaried/professional -> higher-income for-sale & Class-A; hourly base -> workforce/missing-middle rental in N. Richland/Fairfield.",
+     "No fresher aggregate headcount than the April 2026 600+ figure was found despite a dedicated recheck. Two developments cut in opposite directions: the Aug. 17 veto is a genuine positive (removes a funding-hold risk on the state's $150M site-overrun payment), while an elderly-couple lawsuit alleging blasting/septic/stormwater damage (filed ~Aug 7-12) and Scout's declined request to sign a Community Benefits Agreement (SC For All coalition, Aug 13) are modest community-friction negatives. Net score held flat at 83 — the positive and negative developments offset."],
+
+    ["2026-08-24", "Updated", 5, 82, "Holly Springs / SW Wake", "Wake", "NC",
+     "Genentech — biomanufacturing expansion (topping-out milestone)", "Adv. biomanufacturing",
+     "Structural topping-out ceremony", 500, "Projected (site total)",
+     "~$119,833 avg (stated, 2025 tranche)", "N/A — stated", "~$2.0B",
+     "JDIG up to $9.85M / 12 yr (original 420-job award)", "Final structural beam raised Aug. 18, 2026 at the ~700,000 sq ft CaMP Helix Business Park facility; operational target 2029 unchanged",
+     "2026-08-18", "https://www.biospace.com/press-releases/genentech-marks-topping-out-milestone-for-new-holly-springs-north-carolina-manufacturing-facility",
+     "High", "Adv. biomanufacturing", "Suburban",
+     "Strong higher-income for-sale + Class-A rental in fast-growing SW Wake; a topping-out milestone moves the 2029 hiring ramp from planned to physically materializing.",
+     "First genuine in-window construction milestone since the Jan. 2026 investment-doubling announcement — a topping-out ceremony one day after the prior report's cutoff is a concrete, low-execution-risk signal. +2 for reduced execution-risk discount, moving this entry above Capital Group and JetZero in this cycle's ranking."],
+
+    ["2026-08-24", "Repeated", 6, 81, "Charlotte", "Mecklenburg", "NC",
+     "Capital Group — East Coast operations hub", "Investment mgmt / finance + tech",
+     "New facility / operations hub (unchanged)", 600, "Projected",
+     "$194,141 avg (stated; NC Commerce JDIG figure)", "N/A — stated", "$60M",
+     "JDIG up to $17.2M / 12 yr; $5.7M IDF-Utility", "12-yr JDIG term; lease term began 2026-05-22",
+     "2026-05-26", "https://crenews.com/2026/05/28/capital-group-leases-200000-sf-at-charlottes-one-independence-center-office/",
+     "High", "Office — finance/tech", "Urban-suburban",
+     "High-skill eng/data workforce -> walkable South End/Uptown & inner-suburban Class-A and for-sale TH.",
+     "No new in-window milestone found this cycle."],
+
+    ["2026-08-24", "Repeated", 7, 81, "Greensboro / PTI Airport", "Guilford", "NC",
+     "JetZero — aerospace plant (site prep + financing milestone)", "Aerospace / advanced manufacturing",
+     "Groundbreaking (Jun 2026) + EXIM financing LOI (Jul 2026) — both confirmed, no new in-window milestone this cycle", 14500, "Projected",
+     "$89,340 avg (stated, 2025)", "N/A — stated (2025)", "$4.7B",
+     "Transformative JDIG up to $1.018B / 37 yr; Guilford grant $75.9M / 20 yr (unchanged)",
+     "Groundbreaking confirmed held 2026-06-15; EXIM Bank Letter of Interest (up to $3B financing) confirmed signed 2026-07-20 at the Farnborough Airshow; could not confirm a dated report of mass-grading physical progress within the 8/17-8/24 sub-window despite a dedicated recheck",
+     "2026-07-20", "https://www.prnewswire.com/news-releases/jetzero-and-exim-sign-letter-of-interest-to-explore-up-to-3b-in-financing-for-new-aerospace-manufacturing-campus-in-greensboro-north-carolina-302829244.html",
+     "High (facts); Low (current grading status)", "Aerospace mfg + eng.", "Suburban",
+     "Same long-run scale; groundbreaking and EXIM LOI both independently reconfirmed with primary-source URLs this cycle.",
+     "No score change; both previously-credited milestones were independently reconfirmed but no new milestone appeared in the strict recheck window."],
+
+    ["2026-08-24", "Repeated", 8, 79, "Charlotte / Plaza Midwood", "Mecklenburg", "NC",
+     "Scout Motors — Global HQ (2nd office building filed)", "Automotive (EV) — corporate HQ",
+     "Preliminary land-development plan filed for 2nd office building (unchanged)", 1200, "Projected (365 relocating + 835 new local hires)",
+     "$153,978 avg (stated)", "N/A — stated", "$206.9M",
+     "Original 2025-11-12 HQ incentive/relocation commitment", "1st ~150,000 sf building move-in ~mid-2026; 2nd building's land-development plan filed March 2026, construction start targeted H1 2027",
+     "2026-03", "https://hoodline.com/2026/03/scout-motors-hq-move-turbocharges-second-office-building-in-plaza-midwood/",
+     "Med (facts High; milestone stage early)", "Corporate HQ / professional", "Urban",
+     "Supports Plaza Midwood/NoDa/Elizabeth close-in rental and townhome demand from a young, high-wage corporate workforce.",
+     "No new permit/construction-progress news found this cycle despite a dedicated recheck."],
+
+    ["2026-08-24", "Repeated", 9, 77, "Durham / Morrisville", "Durham & Wake", "NC",
+     "Novartis — API mfg building (investment increase)", "Adv. mfg / API production",
+     "New facility (unchanged)", 700, "Projected (part of pre-window deal)",
+     "$111,161 avg (stated)", "N/A — stated", "~$991M (incl. $220M API building)",
+     "Part of original $771M package incentives", "Facility opening targeted 2027-2028",
+     "2026-04-30", "https://www.wral.com/news/local/novartis-pharmaceuticals-expands-nc-presence-morrisville-plant-april-2026/",
+     "High", "Adv. mfg / API production", "Suburban",
+     "Reinforces sustained high-wage biomanufacturing hiring in Wake/Durham corridor.",
+     "No new in-window milestone found this cycle."],
+
+    ["2026-08-24", "Repeated", 10, 74, "Durham", "Durham", "NC",
+     "Aspida Financial Services — HQ expansion", "Financial services / insurance HQ",
+     "Lease executed; building renovation underway (unchanged)", 1000, "Projected",
+     "$137,288 avg (stated)", "N/A — stated", "$28M+ (incl. $10M Imperial Tower renovation)",
+     "Not disclosed", "89,770 sf lease (top 3 floors, Imperial Tower, 4820 Emperor Blvd); Drawbridge Realty's $10M building renovation still tracking to complete summer 2026; move-in still expected Q4 2026",
+     "2026-03", "https://hoodline.com/2026/03/imperial-tower-roars-back-as-10-million-durham-revival/",
+     "Medium (facts High; move-in date not yet company-confirmed)", "Office — financial services/insurance", "Urban",
+     "1,000 high-wage financial-services jobs concentrated in downtown Durham support Class-A urban rental and close-in for-sale demand.",
+     "No confirmation found this cycle that the renovation has actually completed — status remains 'on track,' not yet verified complete."],
+]
+
+RUNNING = WEEK1_RUNNING + WEEK2_RUNNING + WEEK3_RUNNING + WEEK4_RUNNING + WEEK5_RUNNING + WEEK6_RUNNING
 
 # ============================================================================
 # Markets to Watch
@@ -1063,7 +1167,149 @@ WEEK5_WATCH = [
      "https://governor.nc.gov/news/press-releases/2026/03/19/governor-stein-celebrates-psa-airlines-headquarters-grand-opening-charlotte-highlights-only", "Med"],
 ]
 
-WATCH = WEEK1_WATCH + WEEK2_WATCH + WEEK3_WATCH + WEEK4_WATCH + WEEK5_WATCH
+# ---- Week 6 (2026-08-24) — full recheck incl. two targeted follow-up passes; two leads debunked, AWS Hamlet verified ----
+WEEK6_WATCH = [
+    ["2026-08-24", "North Charleston", "Charleston", "SC", "SC Ports Authority — Leatherman Terminal (pause remains in effect)", "400 direct + ~1,200 indirect", "$1.2B",
+     "Not disclosed", "No reopening date found this cycle. A search result titled 'Leatherman Terminal reopening with major weekly Asia service' was run down and confirmed to be a stale, misdated article about a September 2024 ILA-labor-dispute reopening (unrelated ZIM Asia service) — debunked, not a 2026 development. SC Ports' position (reopening tied to cargo-volume recovery, no date set) is unchanged", "2026-08-19 (Breakfast Briefing at Leatherman, no reopening announced)",
+     "https://scdailygazette.com/2026/06/25/sc-ports-temporarily-halts-leatherman-operations-in-face-of-high-costs-waning-demand/", "High"],
+    ["2026-08-24", "Cherokee Co. / Blacksburg", "Cherokee", "SC", "USA Rare Earth — rare-earth magnet plant", "~490", "$1.2B",
+     "$24.50-$63/hr (stated; unchanged)", "No update found this cycle; still just under 500 jobs, commissioning still targeted 2028", "2026-06-02 (last verified)",
+     "https://www.postandcourier.com/spartanburg/business/usa-rare-earth-blacksburg-sc-facility/article_2681ca76-7e5f-4a73-8a80-13231e38917f.html", "High"],
+    ["2026-08-24", "Spartanburg (former Kohler plant)", "Spartanburg", "SC", "NorthMark/Valara \"Project Moc-1\" — AI/HPC data center (litigation/regulatory risk escalating)", "27 FT confirmed on incentive filings (company's own ~150-at-full-operation claim not independently corroborated)", "$2.8B",
+     "Not disclosed", "Jobs figure reconciled DOWN this cycle — 27 FT is the consistently-cited incentive-basis figure across multiple sources; the ~150 figure is Valara's own longer-horizon claim, unconfirmed. Regulatory/legal risk escalated materially: SC PSC held oral arguments 2026-08-05 on whether the ~450-457MW on-site gas plant needs full state siting review and must rule by 2026-09-04; Spartanburg Co. Council delayed the moratorium's 3rd/final reading to 2026-09-21; SELC filed for a temporary injunction to halt construction on 2026-08-20 (no ruling yet); construction reported continuing as of the filing", "2026-08-20",
+     "https://www.foxcarolina.com/2026/08/20/environmental-group-files-court-order-stop-spartanburg-county-data-center-project/", "Med (contested/evolving; jobs count corrected down)"],
+    ["2026-08-24", "Wake County (statewide)", "Wake", "NC", "WakeMed / Atrium Health — proposed merger", "3,300 (statewide, 5 yr)", "$2.0B (Wake Co. portion)",
+     "Not disclosed", "No update since the 2026-08-17 public hearing (no vote taken); earliest possible Commissioners vote remains Sept. 8, 2026", "2026-08-17 (last verified)",
+     "https://www.wral.com/news/local/wakemed-atrium-health-possible-deal-public-meeting-monday-august-17-2026/", "High"],
+    ["2026-08-24", "Greensboro / PTI Airport", "Guilford", "NC", "Boom Supersonic — Overture assembly (AT RISK)", "<=500 currently; must hit 500 by 12/31/26 or lease may terminate", "~$50M (hangar)",
+     "Not disclosed", "No positive movement found; a Prism News feature describes the Greensboro factory as still sitting largely idle roughly two years after the hangar's completion, having 'yet to produce a single aircraft,' with NC having invested $50M+; deadline now ~4 months out with no confirmed current headcount or hiring inflection found", "2026-08 (Prism News feature)",
+     "https://www.prismnews.com/local/guilford-nc/boom-supersonics-greensboro-factory-sits-idle-as-state", "Med-High (risk)"],
+    ["2026-08-24", "Rowan County", "Rowan", "NC", "American Eagle Outfitters", "200+ (state figure; county vote cited 258)", "$41M",
+     "$57,351 avg (stated)", "No update found this cycle; Q1 2027 ops start still targeted", "2026-07-17 (last verified)",
+     "https://www.commerce.nc.gov/news/press-releases/2026/07/17/governor-stein-announces-american-eagle-outfitters-inc-selects-rowan-county-41-million-southeast", "High"],
+    ["2026-08-24", "Charlotte (CLT airport)", "Mecklenburg", "NC", "Averitt — logistics campus", "211 (confirmed)", "$200M",
+     "$81,769 avg (stated)", "No update found this cycle", "2026-06 (last verified)",
+     "https://www.charlottenc.gov/City-News/Averitt-Announces-New-Commitment-to-Charlotte", "High"],
+    ["2026-08-24", "York Co.", "York", "SC", "QTS \"Project Cobra\" — data-center campus", "~200 FTE (+~1,000 constr.)", "up to $8B",
+     "~$80k median (stated)", "No update found this cycle", "2026-07-13 (last verified)",
+     "https://www.postandcourier.com/york-county/news/data-center-york-chester-qts-construction/article_1f68a2a7-8190-49df-b518-23aa5babd587.html", "Med-High"],
+    ["2026-08-24", "Burlington / Alamance-Guilford line", "Alamance", "NC", "Ahold Delhaize USA (Food Lion parent) — distribution center", "500-505", "$860M",
+     "~$60k-$67k avg (Estimated/Inferred, sub-$100k)", "No update found this cycle; opening still targeted 2029", "2026-02-16 (last verified)",
+     "https://www.globenewswire.com/news-release/2026/02/16/3238762/0/en/Ahold-Delhaize-USA-Breaks-Ground-on-New-860-Million-Distribution-Center-in-Burlington-N-C.html", "High"],
+    ["2026-08-24", "Pender / New Hanover", "Pender (+New Hanover)", "NC", "Amazon — robotics fulfillment center", "1,000+", "$350M",
+     "~$22/hr avg (Estimated/Inferred ~$45,760/yr, sub-$100k)", "No update strictly within 8/17-8/24; the most recent confirmed status (2026-08-10) has both the fulfillment center and a nearby delivery station on track for a fall 2026 opening, portions near completion but certificates of occupancy not yet issued", "2026-08-10 (last verified)",
+     "https://www.wilmingtonbiz.com/more_news/2026/08/10/amazon_begins_hiring_as_local_facilities_near_completion/27737", "High"],
+    ["2026-08-24", "Wake Co. (aggregate)", "Wake", "NC", "County jobs pipeline (EDGE 7, 52 projects)", "~11,000 (pipeline)", "$11B",
+     "Mixed (office-skewed)", "No update found this cycle", "2026-02 (last verified)",
+     "https://nchospitalityalliance.com/wake-county-pursues-11-billion-jobs-pipeline/", "Med"],
+    ["2026-08-24", "Charlotte / SouthPark", "Mecklenburg", "NC", "JPMorgan Chase — SouthPark consolidated office", "400 new + ~600 relocated = 1,000 total on-site", "Not disclosed",
+     "~$105k Estimated/Inferred — basis not independently confirmed this cycle (JPMorgan has not disclosed a wage figure in any source found)", "No update found this cycle; move-in still targeted early 2028", "2026-04-21 (last verified)",
+     "https://www.wbtv.com/2026/04/21/jpmorgan-chase-open-1000-employee-charlotte-office-add-400-jobs/", "High (jobs/lease); Low (wage basis)"],
+    ["2026-08-24", "Raleigh / North Hills", "Wake", "NC", "Ralliant Corp. — global HQ launch", "180", "$2.1M",
+     "$170k-$189k avg (stated)", "No update found this cycle; ~150 of 180 target staff remain on-site", "2026-03-05 (last verified)",
+     "https://investors.ralliant.com/news-events/press-releases/detail/121/ralliant-opens-global-headquarters-in-raleigh-north-carolina", "High"],
+    ["2026-08-24", "Raleigh / North Hills", "Wake", "NC", "Jewelers Mutual Group", "200", "$5.85M",
+     "$169,592 avg (stated)", "No update found this cycle", "2026-08 (last verified)",
+     "https://businessnc.com/jewelers-mutual-coming-to-raleigh-with-200-jobs-averaging-169k/", "Med"],
+    ["2026-08-24", "Garner", "Wake", "NC", "Gregory Poole Equipment Co. — HQ relocation", "500+ (5 yr)", "$347M",
+     "~$75,381 companywide avg (Estimated/Inferred, sub-$100k)", "Clarifying (pre-window) detail found: a voluntary annexation petition ('Project Cougar,' ~128 acres) was heard by the Town of Garner on 2026-05-19 — progress, but not the groundbreaking milestone this entry is watching for; no groundbreaking found this cycle", "2026-05-19 (annexation hearing; pre-window)",
+     "https://www.garnernc.gov/Home/Components/News/News/2344/17", "Med"],
+    ["2026-08-24", "Siler City", "Chatham", "NC", "Wolfspeed — silicon-carbide fab (Q4 FY26 earnings reported 8/19 — mixed signal)", "1,800 (proj.)", "$5.0B",
+     "$77,753 avg (stated)", "Q4 FY26 results (2026-08-19): revenue $149.6M (-24% YoY, below Street consensus); FY26 revenue $468.3M (+138% YoY); FY26 net loss $415.8M. Siler City capacity expansion reached 'production readiness,' but underutilization costs rose to $47M in Q4 (from $26M in Q1 FY26) as customer demand has not caught up to installed capacity. AI data-center revenue more than doubled YoY, partly offsetting soft automotive SiC demand. Shares fell ~7.5% same-day, ~10.5% more after-hours. The previously-flagged 'unverified layoffs headline' is now confirmed to reference 2025-dated WARN notices (June and March 2025), not a new 2026 action — that flag is resolved as stale, not current", "2026-08-19",
+     "https://www.businesswire.com/news/home/20260819859398/en/Wolfspeed-Reports-Financial-Results-for-the-Fourth-Quarter-of-Fiscal-2026", "Med (facility now production-ready; demand/utilization risk remains open)"],
+    ["2026-08-24", "Benson", "Johnston", "NC", "Vulcan Elements — magnet factory", "1,000 (proj.)", "$918.4M",
+     "$81,932 avg (stated)", "No update found this cycle; still no confirmation that on-site groundbreaking has occurred, though smelter construction is reportedly still targeted to start by year-end 2026", "2025-11-18 (orig.)",
+     "https://www.commerce.nc.gov/news/press-releases/2025/11/18/governor-stein-announces-vulcan-elements-selects-johnston-county-1000-job-magnet-factory-investing", "Med"],
+    ["2026-08-24", "Multi-site NC incl. Wilmington", "New Hanover +", "NC", "Amazon-Corning — fiber-optics partnership", "1,000 (multi-site, unallocated)", "Multi-billion (undisclosed NC-specific)",
+     "Avg salary >$65,000 (sub-$100k)", "No update found this cycle; per-site Wilmington allocation still not broken out (all sources describe the 1,000 jobs across Corning's Concord and Wilmington sites collectively)", "2026-06-08 (last verified)",
+     "https://www.wilmingtonbiz.com/technology/2026/06/08/amazon_corning_strike_multibillion_dollar_deal_to_add_1000_nc_jobs/27560", "Med"],
+    ["2026-08-24", "Arden", "Buncombe", "NC", "Pratt & Whitney (RTX) — casting foundry expansion", "325", "$285M",
+     "$62,413 avg (stated)", "No update found this cycle; equipment arrival still targeted end 2026, first parts now expected mid-2027", "2026 (last verified)",
+     "https://www.ashevillechamber.org/news-events/press-releases/pratt-whitney-expands-in-asheville/", "Med"],
+    ["2026-08-24", "Asheville / Arden", "Buncombe", "NC", "Eaton — Low Voltage Assembly expansion", "300", "Not disclosed",
+     "Not disclosed (Estimated mid-$60k-$80k)", "No update found this cycle despite a dedicated recheck", "2026-04-08 (last verified)",
+     "https://wlos.com/news/local/eaton-buncombe-county-300-jobs-asheville-advanced-manufacturing-expansion-arden-avery-creek-power-management-company", "High (jobs); Low (wage)"],
+    ["2026-08-24", "Hendersonville", "Henderson", "NC", "BorgWarner — vertical-integration expansion", "378", "$100M",
+     "$67,047 avg (stated; below $100k)", "No update found this cycle", "2026-05-26 (last verified)",
+     "https://www.commerce.nc.gov/news/press-releases/2026/05/26/governor-stein-announces-100-million-expansion-borgwarner-hendersonville", "High"],
+    ["2026-08-24", "Greensboro", "Guilford", "NC", "Lumentum — AI/data-center optics", "~400", "Hundreds of millions",
+     "Not disclosed", "No update found this cycle beyond the April 2026 ribbon-cutting already on record; production still targeted mid-2028", "2026-04 (last verified)",
+     "https://businessnc.com/red-hot-lumentum-plans-400-worker-greensboro-plant/", "Med-High"],
+    ["2026-08-24", "Kernersville", "Forsyth", "NC", "John Deere — excavator plant (relocating from Japan)", "150+", "$70M",
+     "Not disclosed (Inferred skilled-mfg)", "No construction-progress or opening-date update found this cycle; the completed facility received a 2026 Metal Architecture design award (recognition only, not an operational milestone)", "2026 (design award)",
+     "https://businessfacilities.com/john-deere-builds-new-facilities-in-north-carolina-indiana/", "High"],
+    ["2026-08-24", "Asheboro", "Randolph", "NC", "Environmental Air Systems", "300", "$20M",
+     "$55,133 avg (stated)", "No update found this cycle despite targeted searches", "2025-11-25 (orig.)",
+     "https://businessnc.com/randolph-county-wins-20-million-hvac-project-300-jobs/", "Med"],
+    ["2026-08-24", "Wilmington", "New Hanover", "NC", "GE Hitachi / Global Nuclear Fuel — GNF4 fuel line", "Not disclosed", "Not itemized",
+     "Not disclosed", "Still no jobs figure disclosed; open GE/GE Vernova roles in Castle Hayne, NC now number roughly 25-53 across job boards (varies by search term) — similar hiring intensity to last cycle, no material change", "2026-08 (job-posting check)",
+     "https://www.gevernova.com/news/press-releases/global-nuclear-fuel-introduces-next-generation-fuel-product", "Low-Med"],
+    ["2026-08-24", "Liberty", "Randolph", "NC", "Toyota Battery Manufacturing NC (TBMNC)", "5,100 (proj. total); 3,000+ employed", "$13.9B",
+     "$62,234 avg (stated; below $100k)", "No new in-window milestone found this cycle", "2025-11 (last verified)",
+     "https://rebusinessonline.com/toyota-begins-production-at-13-9b-battery-plant-in-north-carolina-pledges-additional-10b-investment-over-next-five-years/", "Med-High"],
+    ["2026-08-24", "Rowan / Kannapolis", "Rowan", "NC", "Google — 730k sq ft warehouse lease (3rd-party logistics operator)", "Not disclosed", "Not disclosed",
+     "$55k-$150k range (job-board postings)", "No update found this cycle; jobs still undisclosed", "2026-04-29 (last verified)",
+     "https://www.qcnews.com/news/u-s/north-carolina/kannapolis/google-signs-multi-year-lease-to-move-into-730000-square-foot-warehouse-in-kannapolis/", "Med"],
+    ["2026-08-24", "RTP", "Wake", "NC", "Apple — RTP campus extension", "3,000 originally projected; only ~600-990 added to date", "$552M-$1B+ (paused)",
+     "$187k avg (stated, original 2021 award)", "No Apple-specific construction or hiring update found this cycle", "2026-06 (last verified)",
+     "https://www.rtp.org/2026/06/research-triangle-park-approves-3-0/", "Med"],
+    ["2026-08-24", "Charlotte / Raleigh / Rural Hall", "Multi", "NC", "Siemens Energy — $421M NC expansion", "500 (statewide)", "$421M",
+     "Not disclosed (Inferred ~$87k from prior tranche; sub-$100k)", "No update found this cycle; clarifying detail confirmed: the Rural Hall/Winston Technology Center (Tobaccoville) site currently employs ~400 people making gas-turbine parts, one piece of the statewide 500-job/$421M plan; per-site job count still not broken out", "2026-08 (Rural Hall headcount context)",
+     "https://businessnc.com/siemens-energys-421-million-n-c-expansion-adding-500-jobs/", "Med (totals uncertain)"],
+    ["2026-08-24", "Raleigh / Wendell / Knightdale", "Wake", "NC", "Siemens AG — power devices for AI/data centers", "350", "part of $165M",
+     "Not disclosed", "No update found this cycle beyond the previously-confirmed breakdown (Knightdale 131,000 sf targeting 100 jobs by YE2026; Wendell 101,000 sf targeting 50 new + 200 additional jobs at the existing campus by 2028); total figure is Carolinas-wide, not NC-only", "2026-03-17 (last verified)",
+     "https://www.wral.com/business/siemens-350-jobs-nc-sc-165m-investment-ai-data-centers-raleigh-wendell-march-2026/", "Med"],
+    ["2026-08-24", "Hamlet", "Richmond", "NC", "AWS/Amazon — AI/cloud campus \"Project Blue Marlin\" (STATUS UPGRADED: VERIFIED)", "500 permanent (confirmed)", "$10B",
+     "Not disclosed", "No longer unverified — confirmed via Amazon's own newsroom and independent local/trade coverage: groundbreaking held ~2026-06-20 at Cole Auditorium in Hamlet, NC with state and congressional officials present; ~800 acres at the Energy Way Industrial Park (adjacent to Duke Energy's Smith Energy Complex); up to 20-21 buildings at ~200,000-225,000 sf each; described as the largest single capital project in NC history. Aug. 2026 investigative coverage (NC Newsline, Inside Climate News) raises transparency/environmental concerns (secretive deal process, ~650 diesel backup generators pending permits) — noted as context, not a jobs/capex change", "2026-06-20 (groundbreaking)",
+     "https://www.aboutamazon.com/news/aws/amazon-data-centers-locations-news?p=amazon-connects-with-future-data-center-talent-in-hamlet-north-carolina", "Med-High (verified this cycle)"],
+    ["2026-08-24", "Orangeburg / I-26", "Orangeburg", "SC", "Ferrara Candy", "1,000 (10 yr)", "$675M",
+     "Not disclosed; confectionery = workforce-tier", "No update found this cycle beyond the May 2026 groundbreaking; first lines still targeted Q1 2029", "2026-05-19/20 (last verified)",
+     "https://www.wistv.com/2026/04/22/ferrara-candy-company-build-675m-orangeburg-county-plant-create-1000-jobs-officials-say/", "High"],
+    ["2026-08-24", "Columbia / BullStreet", "Richland", "SC", "AMAROK — new HQ (perimeter security)", "296", "$69M",
+     "Not disclosed; HQ/professional (portion likely $100k+)", "No update found this cycle; first phase still targeted in service by end of 2026", "2026-03-24 (last verified)",
+     "https://governor.sc.gov/news/2026-03/amarok-expands-richland-county-operations-new-headquarters", "High"],
+    ["2026-08-24", "North Charleston", "Charleston", "SC", "Boeing 787 — production-rate ramp", "1,000+ new jobs over 5 yrs (unchanged); campus total 8,200+", "$1B+ (existing)",
+     "Estimated/Inferred mixed (production ~$70-85k; eng. above $100k)", "No new in-window milestone found strictly within 8/17-8/24; SC Governor McMaster proclaimed 'Boeing 787 Dreamliner Day' on 2026-08-07 (honorific, not operational)", "2026-08-07 (proclamation, context only)",
+     "https://boeing.mediaroom.com/2025-11-07-Boeing-South-Carolina-Breaks-Ground-on-787-Site-Expansion", "Med"],
+    ["2026-08-24", "Goose Creek", "Berkeley", "SC", "HII (Newport News Shipbuilding) — no new momentum this cycle", "~475 employees (unchanged)", "Not disclosed",
+     "Not disclosed", "A search lead suggesting a new HII acquisition of a SC 'advanced metal fabricator' was run down and confirmed to be stale — that acquisition (W International SC / Vivid Empire SC, Goose Creek) was announced Dec. 2024 and closed Jan. 2025, well before this report's tracking window; no 2026 follow-up found. No fresher headcount than ~475 found this cycle", "2025-01-27 (acquisition closing; pre-window, debunked as new)",
+     "https://www.hii.com/news/hii-closes-on-asset-acquisition-to-expand-shipbuilding-capacity", "Med (prior-cycle momentum stands; nothing new confirmed this cycle)"],
+    ["2026-08-24", "Berkeley / Dorchester", "Berkeley & Dorchester", "SC", "Google — data-center expansion", "~160 apprentices (FTE n/d)", "$9B",
+     "Not disclosed", "Standing gap continues for a 4th consecutive cycle — a dedicated follow-up search found only a Google/SC Office of Resilience $1M Habitat for Humanity weatherization grant (2026-08-03), unrelated to data-center jobs or construction; no hiring/construction update for the data-center project itself found despite repeated dedicated searches", "2026-08-03 (unrelated grant; no project-specific update found)",
+     "https://blog.google/company-news/inside-google/company-announcements/google-american-innovation-south-carolina/", "Med (unexpected persistent quiet)"],
+    ["2026-08-24", "Spartanburg", "Spartanburg", "SC", "Siemens Smart Infrastructure", "~150", "$165M",
+     "Avg $78,811/yr ($37.89/hr); 90th pct ~$100k (Estimated/Inferred)", "No update found this cycle", "2026-03-18 (last verified)",
+     "https://www.foxcarolina.com/2026/03/18/tech-manufacturer-building-expanding-upstate-facilities-creating-150-new-jobs/", "High"],
+    ["2026-08-24", "Woodruff / Spartanburg Co.", "Spartanburg", "SC", "AIRSYS Cooling Technologies — global HQ", "215", "$40-60M",
+     "Eng. roles $69-93k; assembly $34-46k (Estimated/Inferred)", "Minor update: HQ formally opened with corporate teams now on-site at the 60-acre, 264,000 sf Woodruff campus; manufacturing/3D-printing operations remain under construction, still targeted early 2027", "2026-08 (HQ opening confirmed)",
+     "https://www.postandcourier.com/spartanburg/business/airsys-data-center-water-woodruff-sc/article_86465e32-7d21-4bba-9a9b-3e6ea0e2d691.html", "Medium"],
+    ["2026-08-24", "Gray Court", "Laurens", "SC", "Aptiv Services US — Connexial Center", "277", "$120.8M",
+     "~$49-76k technician range (Estimated/Inferred)", "No update found this cycle", "2026-07 (last verified)",
+     "https://growlaurenscounty.com/news/article/momentum-continues-at-the-connexial-center-with-aptivs-investment", "High"],
+    ["2026-08-24", "Easley (Anderson/Pickens border)", "Anderson", "SC", "Signature Foods USA", "202", "$11.5M",
+     "Estimated/Inferred sub-$50k (food mfg.)", "No update found this cycle; operations remain online", "2026-04 (last verified)",
+     "https://www.postandcourier.com/greenville/business/easley-anderson-county-signature-foods-investment/article_1d618a58-af96-435a-a05c-7cc6f9253a83.html", "High"],
+    ["2026-08-24", "Greenville", "Greenville", "SC", "GNQ Insilico — AI/quantum techbio HQ", "Not disclosed", "$500M (valuation, not capex)",
+     "Not disclosed", "No jobs-figure disclosure found; new context: GNQ is pursuing a public listing via SPAC merger with IB Acquisition Corp. (NASDAQ: IBAC) and has generated $20M+ contracted revenue since a Sept. 2025 launch — company-financial context, not a jobs/capex update", "2026-08 (SPAC context)",
+     "https://www.greenvillebusinessmag.com/stories/techbio-innovator-gnq-moves-north-american-headquarters-labs-to-greenville,43132", "Med"],
+    ["2026-08-24", "Greenville", "Greenville", "SC", "GE Vernova — gas turbine mfg (momentum continues)", "650 total planned; ~200 hired past yr, ~300 more targeted by end 2026", "$160M (Greenville)",
+     "Estimated/Inferred mixed (bulk likely sub-$100k)", "107 active open GE Vernova postings in Greenville confirmed as of 2026-08-18 (Gas Turbine Assembler Apprentices, Test Operators, Engineers), consistent with the hiring ramp already on record; no new discrete announcement this cycle", "2026-08-18 (job-posting check)",
+     "https://www.postandcourier.com/greenville/business/ge-vernova-greenville-sc-manufacturing-new-jobs/article_7ef2b156-de75-11ef-b98b-b7f96e0e5f82.html", "High"],
+    ["2026-08-24", "Laurens Co. (Laurens)", "Laurens", "SC", "Suniva Inc. — solar-cell manufacturing plant", "564", "$350M",
+     "Estimated/Inferred sub-$100k blended", "No update found this cycle beyond a clarifying detail: opening is specifically timed to Q2 2027 (consistent with prior 'spring/summer 2027' framing)", "2026 (timeline clarification)",
+     "https://www.postandcourier.com/greenville/business/suniva-solar-cell-plant-laurens-sc/article_986c2fc2-2335-48cb-bd3c-92e89604c49c.html", "High"],
+    ["2026-08-24", "Piedmont", "Greenville", "SC", "Isuzu North America — truck assembly plant", "700+", "$280M",
+     "Estimated/Inferred: assembly $35-56k, engineers $79-108k — blended sub-$100k", "No update found this cycle beyond the July 8, 2026 hiring event already on record; production launch still targeted 2027", "2026-07-08 (last verified)",
+     "https://www.ccjdigital.com/business/article/15767928/isuzu-building-280m-truck-plant-in-south-carolina-creating-700-jobs", "Med"],
+    ["2026-08-24", "Ridgeville / Camp Hall", "Berkeley", "SC", "Redwood Materials — battery-materials recycling campus", "1,500 (over coming years)", "$3.5B",
+     "$27-75/hr stated (~$56k-156k) — upper tier clears $100k", "Standing gap continues for a 4th consecutive cycle. A dedicated follow-up search of Redwood's own newsroom, Camp Hall's news page, and regional press confirmed every substantive SC-specific update predates the report window (operations-start milestone dated Nov. 2025; a company site-visit recap dated Feb. 2025) — no 2026 hiring-progress or milestone news exists for this site despite repeated targeted searching", "2025-11 (last confirmed; no in-window update exists)",
+     "https://www.redwoodmaterials.com/news/redwood-begins-critical-materials-recovery-in-south-carolina/", "Med (confirmed no in-window update, not merely unfound)"],
+    ["2026-08-24", "Charlotte", "Mecklenburg", "NC", "PSA Airlines — Charlotte headquarters", "~400 (450+ total team members at HQ)", "Not itemized",
+     "Not disclosed (Estimated/Inferred mixed corporate/admin/ops, likely sub-$100k blended)", "No update found this cycle", "2026-03-19 (last verified)",
+     "https://governor.nc.gov/news/press-releases/2026/03/19/governor-stein-celebrates-psa-airlines-headquarters-grand-opening-charlotte-highlights-only", "Med"],
+]
+
+WATCH = WEEK1_WATCH + WEEK2_WATCH + WEEK3_WATCH + WEEK4_WATCH + WEEK5_WATCH + WEEK6_WATCH
 
 # ============================================================================
 # Excluded / Noise
@@ -1186,7 +1432,21 @@ WEEK5_EXCLUDED = [
     ["2026-08-17", "ElringKlinger — automotive supplier expansion", "Pickens", "SC", "294", "unverified", "Found only via an aggregated search-engine snippet (businessfacilities.com); could not independently fetch/verify a primary source this cycle — flagged as an unverified lead for next cycle rather than reported with a confidence rating", "n/a"],
 ]
 
-EXCLUDED = WEEK1_EXCLUDED + WEEK2_EXCLUDED + WEEK3_EXCLUDED + WEEK4_EXCLUDED + WEEK5_EXCLUDED
+# ---- Week 6 (2026-08-24) ----
+WEEK6_EXCLUDED = [
+    ["2026-08-24", "Prysmian Group — Claremont expansion", "Claremont", "NC", "385", "2026-08-12", "Out of geography — Catawba County is not one of the seven defined Charlotte-metro NC counties; a large ($1B) in-window announcement but outside this report's footprint", "n/a"],
+    ["2026-08-24", "BioAgilytix — Durham HQ expansion", "Durham", "NC", "878", "unverified", "Jobs figure clears 500 but wage is undisclosed in every source found and the announcement date could not be confirmed as falling inside the 2026-02-24 to 2026-08-24 window before the research pass's search budget was exhausted — flagged for date/wage verification next cycle rather than promoted on an unconfirmed basis", "n/a"],
+    ["2026-08-24", "\"BCBSNC 3,000-job Raleigh tower\" / \"Energizer HQ to Apex\" / \"Lowe's 2,000-job Raleigh tech hub\"", "Wake (claimed)", "NC", "n/a", "unverified", "Investigated and DEBUNKED this cycle: all three claims traced to a single low-credibility blog with no corroboration. BCBS NC's HQ remains in Durham; Energizer's HQ remains in Clayton, MO (its only NC project is an unrelated 144-job Asheboro expansion); Lowe's 2,000-job tech tower is confirmed to be in Charlotte's South End, not Raleigh. Excluded as unreliable/false rather than carried forward", "n/a"],
+    ["2026-08-24", "UFP Packaging — new Cherokee County operation", "Cherokee", "SC", "136", "2026-08-14", "Below the 200-job Watch-tier floor; wood/steel packaging is a low-wage industry", "https://governor.sc.gov/news/2026-08/ufp-packaging-grows-south-carolina-footprint-new-cherokee-county-operation"],
+    ["2026-08-24", "Fortified Solar — Greenville expansion", "Greenville", "SC", "151", "2026-08 (unverified exact date)", "Below the 200-job Watch-tier floor", "https://www.postandcourier.com/greenville/business/fortified-solar-expansion-greenville-sc-jobs/article_a50209bb-e5e1-47c3-8d49-428d923eeced.html"],
+    ["2026-08-24", "Tyger River Industrial Park data center", "Spartanburg", "SC", "Not disclosed", "2026-02 (rejected)", "A separate, distinct $3B data-center proposal (not to be confused with NorthMark/Valara Project Moc-1) that Spartanburg County Council REJECTED in February 2026 — a negative/closed signal, not a qualifying announcement", "n/a"],
+    ["2026-08-24", "Unnamed global industrial automation technology company — first SC operation", "Spartanburg", "SC", "162 (over 5 yrs)", "2026 (unverified exact date)", "Below the 200-job Watch-tier floor; jobs phased over 5 years is a weak near-term signal; company name not disclosed in source found", "n/a"],
+    ["2026-08-24", "Xoted Biotechnology Labs", "Spartanburg", "SC", "34", "2026 (unverified exact date)", "Far below the 200-job Watch-tier floor", "n/a"],
+    ["2026-08-24", "MetOx International — Chatham County superconductor facility", "Chatham", "NC", "333", "2024 (last verified)", "Below the 500-job Ranked threshold and no in-window (2026) update could be found this cycle despite a dedicated recheck — recycled/stale rather than newly excluded", "n/a"],
+    ["2026-08-24", "NC Rural Infrastructure Authority grants (Aug. 20, 2026 round) — in-footprint line items only", "Guilford / Alamance / Buncombe", "NC", "131 / 94 / 48 (individually, per project)", "2026-08-20", "The statewide $1B+/342-job announcement includes several in-footprint projects, but each is individually below the 200-job Watch floor (Hoffman & Hoffman reuse grant in Guilford also originally announced Dec. 2025, pre-window) — excluded on job-count grounds", "https://governor.nc.gov/news/press-releases/2026/08/20/governor-stein-announces-more-1-billion-private-investment-and-342-new-jobs-rural-north-carolina"],
+]
+
+EXCLUDED = WEEK1_EXCLUDED + WEEK2_EXCLUDED + WEEK3_EXCLUDED + WEEK4_EXCLUDED + WEEK5_EXCLUDED + WEEK6_EXCLUDED
 
 # ============================================================================
 # Source Log
@@ -1255,6 +1515,14 @@ SOURCES = [
     ["StockTitan — Wolfspeed earnings", "journal", "https://www.stocktitan.net/", "Chatham Co. NC", "Wolfspeed Q4 FY26 earnings-call scheduling; financial-strain signals"],
     ["Post and Courier — Redwood Materials", "journal", "https://www.postandcourier.com/", "Berkeley Co. SC", "Redwood Materials Camp Hall/Ridgeville battery-recycling campus"],
     ["NC Governor's Office — PSA Airlines / STERIS", "state_primary", "https://governor.nc.gov/", "Mecklenburg & Lee Co. NC", "PSA Airlines grand opening; STERIS Sanford announcement"],
+    ["Post and Courier — York County", "journal", "https://www.postandcourier.com/york-county/", "York Co. SC", "Octapharma Aug. 19 site-plan reveal at SC I-77 Alliance summit"],
+    ["Pharma Manufacturing / BioSpace / rebusinessonline", "trade_journal", "https://www.pharmamanufacturing.com/", "Wake Co. NC", "Genentech Holly Springs topping-out ceremony (Aug. 18, 2026)"],
+    ["SC Daily Gazette — budget/Scout", "journal", "https://scdailygazette.com/", "Richland Co. SC", "Gov. McMaster's Aug. 17 veto clearing $150M Scout Motors site cost-overrun payment"],
+    ["Post and Courier / Fox Carolina — Spartanburg data-center litigation", "journal", "https://www.foxcarolina.com/", "Spartanburg Co. SC", "NorthMark/Valara Project Moc-1: PSC oral arguments, SELC injunction filing, moratorium delay"],
+    ["BusinessWire / Nasdaq — Wolfspeed Q4 FY26 earnings", "company_primary", "https://www.businesswire.com/", "Chatham Co. NC", "Wolfspeed Q4 FY2026 financial results (Aug. 19, 2026 earnings call)"],
+    ["About Amazon — AWS Hamlet", "company_primary", "https://www.aboutamazon.com/", "Richmond Co. NC", "AWS/Amazon Hamlet 'Project Blue Marlin' data-center campus verification + groundbreaking"],
+    ["Prism News — Boom Supersonic", "journal", "https://www.prismnews.com/", "Guilford Co. NC", "Boom Supersonic Greensboro factory idle-status feature"],
+    ["Post and Courier — Redwood Materials / Google follow-up", "journal", "https://www.redwoodmaterials.com/", "Berkeley Co. SC", "Redwood Materials + Google Berkeley/Dorchester standing-gap dedicated recheck"],
 ]
 
 # ============================================================================
@@ -1323,28 +1591,40 @@ WEEK5_SCORE_DETAIL = [
     ["2026-08-17", "Novartis (Durham/Morrisville)", 77, "Unchanged; no new milestone this cycle."],
     ["2026-08-17", "Aspida Financial Services (Durham)", 74, "New to Ranked (reclassified from Watch): 1,000 jobs + stated $137,288 wage + $10M Imperial Tower renovation confirmed on track for summer 2026 completion, corroborating the expected Q4 2026 move-in; capped below longer-tenured entries by Medium confidence (move-in date not yet company-confirmed) and zero repeat-momentum as a first-time-ranked entry."],
 ]
-SCORE_DETAIL = WEEK1_SCORE_DETAIL + WEEK2_SCORE_DETAIL + WEEK3_SCORE_DETAIL + WEEK4_SCORE_DETAIL + WEEK5_SCORE_DETAIL
+WEEK6_SCORE_DETAIL = [
+    ["2026-08-24", "SMBC Group (Charlotte)", 93, "Unchanged; no new milestone this cycle (fifth consecutive quiet cycle)."],
+    ["2026-08-24", "Octapharma (Rock Hill)", 91, "Public site-plan renderings presented at the SC I-77 Alliance summit (Aug. 19) is a genuine forward-planning milestone, moving the project from 'approved on paper' toward a visible design phase — net +1 for reduced execution-risk discount, even though the property sale itself is still not confirmed closed."],
+    ["2026-08-24", "AbbVie (Durham)", 84, "Unchanged; no new milestone this cycle."],
+    ["2026-08-24", "Scout Motors — EV plant (Blythewood)", 83, "Two offsetting in-window developments: Gov. McMaster's Aug. 17 budget veto clears a $150M state payment for site cost overruns (positive, removes a funding-hold risk), while a resident lawsuit over blasting/septic damage and Scout's declined Community Benefits Agreement request are modest community-friction negatives. Net score held flat — no fresher aggregate headcount than April's 600+ figure was found despite a dedicated recheck."],
+    ["2026-08-24", "Genentech (Holly Springs)", 82, "Structural topping-out ceremony held Aug. 18, 2026 (final beam raised on the ~700,000 sf, ~$2B facility) is a concrete, low-risk construction milestone — net +2 for reduced execution-risk discount, moving this entry above Capital Group and JetZero this cycle."],
+    ["2026-08-24", "Capital Group (Charlotte)", 81, "Unchanged; no new milestone this cycle."],
+    ["2026-08-24", "JetZero (Greensboro)", 81, "Unchanged; both previously-credited milestones (June groundbreaking, July EXIM financing LOI) were independently reconfirmed with primary-source URLs, but no new milestone appeared within the strict 8/17-8/24 recheck window."],
+    ["2026-08-24", "Scout Motors — Global HQ (Charlotte)", 79, "Unchanged; no new permit/construction-progress news found this cycle despite a dedicated recheck."],
+    ["2026-08-24", "Novartis (Durham/Morrisville)", 77, "Unchanged; no new milestone this cycle."],
+    ["2026-08-24", "Aspida Financial Services (Durham)", 74, "Unchanged; the Imperial Tower renovation remains 'on track for summer 2026' but no source found this cycle confirms it has actually completed."],
+]
+SCORE_DETAIL = WEEK1_SCORE_DETAIL + WEEK2_SCORE_DETAIL + WEEK3_SCORE_DETAIL + WEEK4_SCORE_DETAIL + WEEK5_SCORE_DETAIL + WEEK6_SCORE_DETAIL
 
 # ============================================================================
 # Weekly Summary
 # ============================================================================
 SUMMARY_LINES = [
     ("Report", "Carolinas Job Growth & Housing Demand Report"),
-    ("Week / Report date", REPORT_DATE + "  (Week 5)"),
+    ("Week / Report date", REPORT_DATE + "  (Week 6)"),
     ("Coverage window", WINDOW + "  (trailing 6 months)"),
     ("Geography", "North Carolina + South Carolina"),
-    ("Qualifying (ranked) deals this week", str(len(WEEK5_RUNNING))),
+    ("Qualifying (ranked) deals this week", str(len(WEEK6_RUNNING))),
     ("Qualifying (ranked) deals — cumulative", str(len(RUNNING))),
-    ("Markets to Watch this week", str(len(WEEK5_WATCH))),
-    ("Excluded / Noise this week", str(len(WEEK5_EXCLUDED))),
+    ("Markets to Watch this week", str(len(WEEK6_WATCH))),
+    ("Excluded / Noise this week", str(len(WEEK6_EXCLUDED))),
     ("", ""),
     ("Top market", "Charlotte / Uptown (Mecklenburg, NC) — SMBC Group, score 93"),
-    ("Top mover", "North Charleston (Charleston Co., SC) — SC Ports Authority Leatherman Terminal pause CONFIRMED in effect as of Aug. 1, 2026 (phasing through mid-Sept.), resolving the report's single largest open question across the last two cycles; no reopening date set"),
-    ("Key takeaway", "This cycle closed out the prior two-cycle SC Midlands/Lowcountry and Upstate SC research gap with a full recheck of both regions. Biggest miss corrected: Suniva's $350M/564-job Laurens Co. solar-cell plant (announced April 2026) had never been tracked. Scout Motors' Blythewood EV plant got its first independent recheck in 5 weeks — the previously-carried ~1,400-employee figure could not be corroborated (best-supported figure is 600+), and delivery-timeline risk is newly flagged, so its score was trimmed 3 points. Aspida Financial Services (Durham, 1,000 jobs, $137,288 wage) is newly Ranked on a confirmed building-renovation milestone. HII (Goose Creek, SC) and JetZero (Greensboro) both show genuine forward momentum."),
-    ("Coverage note", "All five regions received a full research pass this cycle (Charlotte metro, NC Triangle, NC Triad/WNC/Coastal, Upstate SC, SC Midlands/Lowcountry) — no region was skipped. Several news-site domains returned EGRESS_BLOCKED on direct WebFetch; findings from those domains rely on WebSearch-result snippets citing the same named URLs rather than full-page fetches, flagged per-item where this applies. No numbers were invented; 'Not disclosed' marks missing figures and 'Estimated/Inferred' marks derived ones with basis stated."),
-    ("Window note", "Trailing 6 months now runs 2026-02-17 to 2026-08-17."),
-    ("Data-quality note", "SC Ports' Leatherman Terminal pause (announced 2026-06-25, targeted for Aug. 1, 2026) is now confirmed to have taken effect, phasing in gradually through roughly mid-Sept. 2026; no reopening timeline exists. Separately, Scout Motors' Blythewood headcount figure was corrected — the previously-carried ~1,400 employees could not be corroborated this cycle; 600+ (Apr. 2026) is the best-supported current figure."),
-    ("Week-over-week", "9 of 9 prior-ranked deals remain qualifying, plus 1 new (Aspida Financial Services, Durham) — 10 total. 1 updated with a downward correction (Scout Motors EV plant, -3), 1 updated positively (JetZero, +1), 7 repeated unchanged (SMBC, Octapharma, AbbVie, Capital Group, Genentech, Scout Motors HQ, Novartis). None removed from Ranked. FN America removed from Watch (4th consecutive stale cycle); PSA Airlines reclassified from Excluded to Watch (was mis-scoped as pre-window); 3 new Watch items (Suniva, Isuzu North America, Redwood Materials)."),
+    ("Top mover", "Holly Springs / SW Wake (Wake Co., NC) — Genentech's Aug. 18, 2026 structural topping-out ceremony (final beam raised on the ~700,000 sf, ~$2B facility) is the cycle's clearest, best-corroborated in-window construction milestone, moving the entry's score up 2 points and above Capital Group and JetZero in this cycle's ranking"),
+    ("Key takeaway", "This was largely a verification cycle rather than a discovery cycle: all five regions plus two targeted follow-up passes (SC Midlands/Lowcountry, NC Triad/WNC/Coastal) were run, but no new Ranked- or Watch-tier company/project announcement was found dated inside 2026-08-17 to 2026-08-24 — a genuinely quiet week for fresh 500+/200+-job announcements across the footprint. Two previously-unconfirmed leads were run to ground and debunked as stale, misdated articles rather than real 2026 developments: a claimed SC Ports Leatherman Terminal reopening (the underlying article was from Sept. 2024) and a claimed new HII South Carolina acquisition (the underlying deal closed in Jan. 2025). One long-running unverified item, AWS/Amazon's Hamlet 'Project Blue Marlin' data-center campus (Richmond Co., NC — 500 jobs, $10B), was independently verified this cycle via Amazon's own newsroom plus a confirmed ~June 20, 2026 groundbreaking. NorthMark/Valara 'Project Moc-1' (Spartanburg, SC) saw its regulatory/legal risk escalate materially, with a SC Public Service Commission ruling due Sept. 4, 2026 and an SELC injunction motion filed Aug. 20 seeking to halt construction. Wolfspeed's Aug. 19 Q4 FY26 earnings call delivered a genuinely mixed signal for Siler City: the site reached 'production readiness,' but underutilization costs kept rising as customer demand has not caught up to capacity."),
+    ("Coverage note", "All five regions received a full research pass this cycle, plus two additional targeted follow-up passes to close gaps left by search-budget exhaustion in the SC Midlands/Lowcountry and NC Triad/WNC/Coastal passes (Boeing, Redwood Materials, Google data center, AMAROK, Ferrara Candy, and ten Triad/WNC/Coastal Watch items were all successfully rechecked in the follow-up passes). WebFetch (direct page retrieval) returned EGRESS_BLOCKED for essentially every news/gov domain attempted across all agents this cycle; every finding below relies on WebSearch-result content/snippets, which do surface real, retrievable source URLs, cross-checked across multiple independent queries. No numbers were invented; 'Not disclosed' marks missing figures and 'Estimated/Inferred' marks derived ones with basis stated."),
+    ("Window note", "Trailing 6 months now runs 2026-02-24 to 2026-08-24."),
+    ("Data-quality note", "Two previously-surfaced leads were investigated and debunked this cycle as stale/misdated articles, not 2026 developments: a claimed SC Ports Leatherman Terminal reopening (actual article dated Sept. 2024) and a claimed new HII South Carolina acquisition (actual deal closed Jan. 2025). NorthMark/Valara's jobs figure was reconciled down to 27 FT (the consistently-cited incentive-basis figure) from a previously-carried ~150 estimate. AWS/Amazon's Hamlet, NC data-center campus, carried for multiple cycles as 'unverified,' is now confirmed via a primary Amazon source and a dated groundbreaking."),
+    ("Week-over-week", "10 of 10 prior-ranked deals remain qualifying — none removed, none newly added. 2 updated positively (Octapharma +1 to 91 on a site-plan-design milestone; Genentech +2 to 82 on a structural topping-out ceremony), 1 updated with offsetting context and no net score change (Scout Motors EV plant, funding veto vs. community-relations friction), 7 repeated unchanged (SMBC, AbbVie, Capital Group, JetZero, Scout Motors HQ, Novartis, Aspida). Watch tier: no new items added and none removed; AWS/Amazon Hamlet upgraded from unverified to confirmed; Wolfspeed and NorthMark/Valara both saw material updates; two leads (SC Ports reopening, HII acquisition) were investigated and debunked rather than added as new information."),
 ]
 
 
